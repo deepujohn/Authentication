@@ -12,15 +12,65 @@
  		<label for="fname">First Name</label>
  	</div>
  	<div class="editor">
- 		<input type="text" name="fname">
+ 		<input type="text" name="fname" required pattern="[a-zA-Z]{3,15}" autocomplete>
  	</div>
  	<div class="label">
  		<label for="mname">Middle Name</label>
  	</div>
  	<div class="editor">
- 		<input type="text" name="mname">
+ 		<input type="text" name="mname" pattern="[a-zA-Z. ]{0,15}" autocomplete>
  	</div>
- 	
+ 	<div class="label">
+ 		<label for="lname">Last Name</label>
+ 	</div>
+ 	<div class="editor">
+ 		<input type="text" name="lname"required pattern="[a-zA-Z]{3,15}" autocomplete>
+ 	</div>
+ 	<div class="label">
+ 		<label for="sex">Gender</label>
+ 	</div>
+ 	<div class="editor">
+ 		<input type="radio" name="sex" value="male">Male
+		<input type="radio" name="sex" value="female">Female
+ 	</div>
+ 	<div class="label">
+ 		<label for="password">Password</label>
+ 	</div>
+ 	<div class="editor"> 		
+		<input type="password" name="password" required pattern="[a-zA-Z0-9]{6,15}">
+ 	</div>
+ 	<div class="label">
+ 		<label for="cpassword">Confirm Password</label>
+ 	</div>
+ 	<div class="editor"> 		
+		<input type="password" name="cpassword" required pattern="[a-zA-Z0-9]{6,15}">
+ 	</div>
+ 	<div class="label">
+         <label name="city">City</label>
+    </div>
+    <div class="editor"> 						<input type="text" name="city" required pattern="[a-zA-Z ]{3,15}" autocomplete>
+    </div>
+    <div class="label"> 						<label name="cntry">Country</label>
+    </div>
+    <div class="editor"> 						<input type="text" name="cntry"   required pattern="[a-zA-Z ]{3,15}" autocomplete>
+    </div>
+     <div class="label"> 		
+      <label name="phone">Phone</label>
+    </div>
+    <div class="editor"> 		
+    <input type="text" name="phone" required pattern="[0-9]{8,13}" autocomplete>
+    </div>
+    <div class="label"> 		
+    <label name="pin">Pincode</label>
+    </div>
+    <div class="editor"> 		
+    <input type="text" name="pin" required pattern="[0-9]{6,6}" autocomplete>
+    </div>
+
+ 	<div id="submit">
+ 	 <input type="submit" value="Register">
+     <input type="reset" value="Reset">
+	</div>
  </fieldset>
  	
  </form>
