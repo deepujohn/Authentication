@@ -1,0 +1,50 @@
+body
+{
+	background-color: white;	
+}
+ul
+{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;	
+}
+li 
+{
+	float: left;	
+}
+a:link,a:visited
+{
+	display: inline;
+	width: 120px;	
+	font-weight: bold;
+	color: #ee5436;
+		background-color: #181818;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;	
+}
+a:hover,a:active
+{
+	background-color: #333333;
+	color: red;
+}
+#menu
+{
+	width: 100%;
+	background-color: #181818;
+	margin: 0px;
+	padding:7px;
+}
+form
+{
+	background-color: white;
+}
+.label
+{
+	padding:0.5%;
+}
+.editor
+{
+    padding:0.25%;	
+}
