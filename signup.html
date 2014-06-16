@@ -3,17 +3,19 @@
 <head>
 	<title>Authentication|Sign Up</title>
   <link href="Styles/style.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="Scripts/signupvalidation.js"></script>
 </head>
-<body>
+<body id="account">
 <div align="right">
  <nav>  
   <a href="index.html">Back</a>
   </nav>
  </div>
  <div id="register">
- <form name="signup" action="index.html">
+ <form name="signup" action="index.html" onsubmit="return validatePassword()">
  <fieldset>
  	<legend>Sign Up</legend>
+  <div id="validation"></div>
  	<div class="label">
  		<label for="fname">First Name</label>
  	</div>
@@ -79,9 +81,8 @@
 	</div>
  </fieldset>
  	
- </form>
- 	
- </div>
+ </form> 	
+ </div> 
 
 </body>
 </html>
