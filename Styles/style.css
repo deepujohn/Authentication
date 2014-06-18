@@ -57,7 +57,7 @@ form
    padding: none;
    color:white;
    font-weight: bold;
-   font-size: 46px;
+   font-size: 46px;   
 }
 #footer
 {   
@@ -83,4 +83,10 @@ fieldset
 	background-color: white;
 	padding: none;
 	border-color: #EBF0F5;	
+}
+#errormessage
+{
+	color:red;
+	padding:0.75%;
+    opacity: 0.8;
 }

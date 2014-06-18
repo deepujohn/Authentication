@@ -3,6 +3,7 @@
 <head>
 	<title>Authentication|Sign In</title>
 	<link href="Styles/style.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="Scripts/signinvalidation.js"></script>
 </head>
 <body id="account">
 <div align="right">
@@ -11,22 +12,25 @@
   </nav>
  </div>
 <div id="signin">
-	<form name="signin" action="welcome.html" method="post">
+	<form name="signin" action="welcome.html" 
+	 method="post">
 	<fieldset>
 	<legend>Sign In</legend>
 		<div class="label">
 		<label for="username">User Name</label>
 		</div>
 		<div class="editor">
-		<input name="username" type="email" required>
+		<input name="username" type="text">
 		</div>
 		<div class="label">
 		<label for="password">Password</label>
 		</div>
 		<div class="editor">
-		<input name="password" type="password" required>
+		<input name="password" type="password" >
 		</div>
-		<input type="submit" value="Sign In">  
+		<div id="errormessage"></div>
+		<input type="submit" value="Sign In" onclick="return validate()">  
+		<input type="button" value="Reset" onclick="reset()">
     </fieldset>
     </form>
 </div>
