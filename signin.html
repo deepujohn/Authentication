@@ -3,7 +3,7 @@
 <head>
 	<title>Authentication|Sign In</title>
 	<link href="Styles/style.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="Scripts/signinvalidation.js"></script>
+	<script type="text/javascript" src="Scripts/authentication.js"></script>
 </head>
 <body id="account">
 <div align="right">
@@ -20,17 +20,17 @@
 		<label for="username">User Name</label>
 		</div>
 		<div class="editor">
-		<input name="username" type="text">
+		<input name="username" id="uname" type="text">
 		</div>
 		<div class="label">
 		<label for="password">Password</label>
 		</div>
 		<div class="editor">
-		<input name="password" type="password" >
+		<input name="password" id="pwd" type="password" >
 		</div>
 		<div id="errormessage"></div>
-		<input type="submit" value="Sign In" onclick="return validate()">  
-		<input type="button" value="Reset" onclick="reset()">
+		<input type="submit" value="Sign In" onclick="return validatesignin()">  
+		<input type="button" value="Reset" onclick="resetsignin()">
     </fieldset>
     </form>
 </div>
