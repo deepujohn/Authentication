@@ -19,7 +19,7 @@ a:link,a:visited
 	width: 120px;	
 	font-weight: bold;
 	color: #ee5436;
-		background-color: #181818;
+	background-color: #181818;
 	text-align: center;
 	padding: 4px;
 	text-decoration: none;	
@@ -40,12 +40,17 @@ form
 {
 	background-color: white;
 }
+input[type="text"],input[type="password"],select
+{	
+	width: 50%;	
+}
 .label
 {
+	color: #365499;
 	padding:0.5%;
 }
 .editor
-{
+{	
     padding:0.25%;	
 }
 #header
@@ -97,3 +102,4 @@ fieldset
 	padding:0.75%;
     opacity: 0.8;	
 }
+

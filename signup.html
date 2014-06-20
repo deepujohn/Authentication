@@ -22,6 +22,7 @@
  		<input type="text" name="fname" id="first" autocomplete onkeyup="onlyalpha()" onblur="onlyalpha()">
     <div class="error" id="fname"></div>   
  	</div>
+
  	<div class="label">
  		<label for="mname">Middle Name</label>
  	</div>
@@ -29,6 +30,7 @@
  		<input type="text" name="mname" id="middle"  autocomplete onkeyup="onlyalpha()" onblur="onlyalpha()">
     <div class="error" id="mname"></div>   
  	</div>
+
  	<div class="label">
  		<label for="lname">Last Name</label>
  	</div>
@@ -36,14 +38,30 @@
  		<input type="text" name="lname" id="last"  autocomplete onkeyup="onlyalpha()" onblur="onlyalpha()">
     <div class="error" id="lname"></div>   
  	</div>
+
  	<div class="label">
  		<label for="sex">Gender</label>
  	</div>
  	<div class="editor">
- 		<input type="radio" name="sex" id="male" value="male" onclick="removegenerror()">Male
-		<input type="radio" name="sex" id="female" value="female" onclick="removegenerror()">Female
+ 		<input type="radio" name="sex" id="male" value="male" onclick="removegenerror()"><label for="male">Male</label>
+		<input type="radio" name="sex" id="female" value="female" onclick="removegenerror()"><label for="female">Female</label>
     <div class="error" id="sex"></div>   
- 	</div>
+ 	</div>  
+
+  <div class="label">
+    <label for="lang">Languages</label>
+  </div>
+  <div class="editor">
+  <div>
+    <input type="checkbox" name="lan" id="en" ><label for="en">English</label>
+    <input type="checkbox" name="lan" id="ml" ><label for="ml">Malayalam</label>
+   <div>
+   <div> 
+     <input type="checkbox" name="lan" id="ot" ><label for="ot">Others</label>    
+    </div>
+    <div class="error" id="lang"></div>   
+  </div>  
+  
  	<div class="label">
  		<label for="password">Password</label>
  	</div>
@@ -68,8 +86,14 @@
     <div class="label"> 					
     	<label name="cntry">Country</label>
     </div>
-    <div class="editor"> 					
-    	<input type="text" name="cntry" id="cnt"  autocomplete onkeyup="onlyalpha()" onblur="onlyalpha()">
+    <div class="editor"> 			
+    <!--		
+    	<input type="text" name="cntry" id="cnt"  autocomplete onkeyup="onlyalpha()" onblur="onlyalpha()">-->
+      <select name="cntry" id="cnt">
+        <option value="" disabled="disabled" selected="selected">select country</option>
+        <option id="1">India</option>
+        <option id="2">Other</option>
+      </select>
     <div class="error" id="country"></div>   
     </div>
      <div class="label"> 		
@@ -86,9 +110,16 @@
     <input type="text" name="pin" id="pn"  autocomplete onkeyup="onlynumber()" onblur="onlynumber()">
     <div class="error" id="pin"></div>   
     </div>    
+    <div class="label">
+          <label for="file">Image</label>
+    </div>
+    <div class="editor">
+      <input type="file" id="file">
+    </div>
 
- 	<div id="submit">
- 	 <input type="submit" value="Register">
+
+ 	<div id="buttons">
+ 	 <input type="submit" value="Register">    
      <input type="button" value="Reset" onclick="resetsignup()">
 	</div>
  </fieldset>

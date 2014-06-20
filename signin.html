@@ -20,17 +20,19 @@
 		<label for="username">User Name</label>
 		</div>
 		<div class="editor">
-		<input name="username" id="uname" type="text">
+		<input name="username" id="uname" type="text" onkeyup="onlyemail()" onblur="onlyemail()">
 		</div>
 		<div class="label">
 		<label for="password">Password</label>
 		</div>
 		<div class="editor">
-		<input name="password" id="pwd" type="password" >
+		<input name="password" id="pwd" type="password" onkeyup="removepass()" onblur="removepass()">
 		</div>
 		<div id="errormessage"></div>
-		<input type="submit" value="Sign In" onclick="return validatesignin()">  
-		<input type="button" value="Reset" onclick="resetsignin()">
+		<div id="buttons">
+		 <input type="submit" value="Sign In" onclick="return validatesignin()">  	
+		 <input type="button" value="Reset" onclick="resetsignin()">
+		</div>
     </fieldset>
     </form>
 </div>

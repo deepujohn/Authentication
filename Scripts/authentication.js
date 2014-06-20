@@ -1,6 +1,11 @@
 /*
 Sign In
 */
+function onlyemail()
+{
+    var user=document.getElementById("uname");
+    user.value=user.value.replace(/[^a-zA-Z0-9.\@]/g,"")
+}
 function validatesignin()
 {
     var emailRegex = /^[A-Za-z0-9._]*\@[A-Za-z]*\.[A-Za-z]{2,5}$/;
@@ -65,7 +70,7 @@ function onlyalpha()
 	country=document.getElementById("cnt");	
 	fname.value=fname.value.replace(/[^A-Za-z]/g,'');
 	mname.value=mname.value.replace(/[^A-Za-z]/g,'');
-	lname.value=lname.value.replace(/[^A-Za-z]/g,'');
+	lname.value=lname.value.replace(/[^A-Za-z.]/g,'');
 	city.value=city.value.replace(/[^A-Za-z]/g,'');
 	country.value=country.value.replace(/[^A-Za-z]/g,'');    
 }
@@ -94,6 +99,9 @@ function validatesignup()
 	country=document.getElementById("cnt");
 	phone=document.getElementById("phn");
 	pin=document.getElementById("pn");	
+    en=document.getElementById("en").checked;
+    ml=document.getElementById("ml").checked;
+    ot=document.getElementById("ot").checked;
 
 	f=document.getElementById("fname");
 	m=document.getElementById("mname");
@@ -105,6 +113,7 @@ function validatesignup()
 	cnt=document.getElementById("country");
 	ph=document.getElementById("phone");
 	pn=document.getElementById("pin");
+    ln=document.getElementById("lang");
     
     if(fname.value=="")
     {
@@ -141,6 +150,17 @@ function validatesignup()
     	g.style.display="block";
     	g.innerHTML="Please select your gender";
     	return false;
+    }
+    if(!(en|ml|ot))
+    {
+        ln.focus();
+        ln.style.display="block";
+        ln.innerHTML="Please select a language";
+        return false;
+    }
+    else
+    {
+        ln.style.display="none";
     }
     if(password.value=="")
     {
@@ -195,21 +215,21 @@ function validatesignup()
     else
     {
     	ct.style.display="none";
-    }
+    }    
     if(country.value=="")
-    {
+    {        
     	country.focus();
     	cnt.style.display="block";
-    	cnt.innerHTML="Please enter your country name";
+    	cnt.innerHTML="Please select country name";
     	return false;
     }
-    else if(country.value.length<3)
+   /* else if(country.value.length<3)
     {
     	country.focus();
     	cnt.style.display="block";
     	cnt.innerHTML="Minimum 3 characters";
     	return false;
-    }
+    }*/
     else
     {
     	cnt.style.display="none";
@@ -250,6 +270,30 @@ function validatesignup()
     {
     	pn.style.display="none";
     }
+/*++++++++++++++    
+File
++++++++++++++++
+*/
+        var fuData = document.getElementById('file');
+        var FileUploadPath = fuData.value;
+//To check if user upload any file
+        if (FileUploadPath == '')
+         {
+            alert("Please upload an image");
+            return false;
+         }
+         else 
+         {
+            var Extension = FileUploadPath.substring(
+            FileUploadPath.lastIndexOf('.') + 1).toLowerCase();
+            if(!(Extension == "gif" || Extension == "png" || Extension == "bmp"
+                    || Extension == "jpeg" || Extension == "jpg"))
+            {
+                alert("Image files only");
+                return false;
+            }
+
+         }  
 return true;
 }
 function resetsignup()
